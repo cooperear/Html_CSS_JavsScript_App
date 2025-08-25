@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <title>도서관리시스템</title>
+         <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin :30px;
+                padding: 20px;
+                background-color: gray;
+            }
+            h1 {
+                color: violet;
+                border-bottom:  2px solid #007bff ;
+                padding-bottom: 5px;
+            }
+            h2 {
+                text-align: center;
+                color :coral;
+                border-bottom:  2px solid chartreuse;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+                display: block;
+
+            }
+            form {
+                background-color: slategrey;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                display: block;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                color: wheat;
+            }
+            input {background-color: bisque;}
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: none;
+                background-color: darkorchid;
+            }
+            button:hover {
+                background-color: green;
+            }
+            table {
+                 width: 100%;
+            /* 테이블의 너비를 부모 요소의 100%로 설정 */
+            border-collapse: collapse;
+            /* 테이블 셀 간의 경계선을 하나로 병합 */
+            background-color: white;
+            /* 테이블 배경색을 흰색으로 설정 */
+            border-radius: 5px;
+            /* 테이블 모서리를 5픽셀만큼 둥글게 만듦 */
+            overflow: hidden;
+            /* 테이블 내용이 경계를 넘어갈 때 숨김 */
+            }
+            th, td {
+                padding : 10px;
+                font-weight: bold;
+                text-align:center;
+                display: table-cell;
+            }
+            th {
+                background-color: teal;
+                color: #444;
+            }
+            tr:hover {
+                margin: auto;
+                background-color: darkcyan;
+                color:aliceblue;
+            }
+         </style>
+
+
+        
+
+    </head>
+    <body>
+        
+        <div>
+        <h2>도서 등록</h2>
+        <form>
+            <label for="title">제목 :</label>
+            <input type="text" name="title" id="title" required>
+            <!--  -->
+            <label for="author">저자 :</label>
+            <input type="text" name="author" id="author" required>
+            <!--  -->
+            <label for="isbn">ISBN :</label>
+            <input type="text" name="isbn" id="isbn" required>
+            <!--  -->
+            <label for="price">가격 :</label>
+            <input type="text" name="price" id="price" required>
+            <!--  -->
+            <label for="dateOfBirth">출판일:</label>
+            <input type="date" name="dateOfBirth" id="dateOfBirth">
+            <!--  -->
+            <button type="submit">도서 등록</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>학생 리스트</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>저자</th>
+                    <th>ISBN</th>
+                    <th>가격</th>
+                    <th>출판일</th>
+                    <th>액션</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+        
+        
+    </body>
+</html>

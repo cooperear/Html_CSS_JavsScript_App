@@ -3,11 +3,123 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>학생 관리 시스템</title>
+        <style type = "text/css">
+            body{
+                
+                font-family: Arial, Helvetica, sans-serif;
+                margin :30px;
+                padding: 20px;
+                background-color: gray;
+                /* background-origin: padding-box; */
+                
+ 
+            }
+            h1{
+                color: violet;
+                border-bottom:  2px solid #007bff ;
+                padding-bottom: 5px;
+            }
+            /*  */
+            h2{
+                text-align: center;
+                color :coral;
+                border-bottom:  2px solid chartreuse;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+                display: block;
+            }
+            input{
+                padding:10px 20px;
+                border : none;
+                border-radius:none;
+                display: block;
+            }
+
+            button{
+                padding:10px 20px;
+                border : none;
+                border-radius:none;
+                background-color:cyan;
+
+            }
+            button:hover{
+                background-color: pink;
+            }
+            table{
+                
+            }
+            
+        </style>
     </head>
+
     <body>
-    
+        <h1>학생 관리 시스템</h1>
         
-        
+        <div>
+            <!-- <fieldset>
+                <legend><h2>학생 등록</h2></legend> -->
+
+                <form>
+                    
+                    <label for = "name">이름 :</label>
+                    <input type="text" name="name" id = "name" required>
+                    <!--  -->
+                    <label for = "name">학번 :</label>
+                    <input type="text" name="studentNumber" id = "studentNumber" required>
+                    <!--  -->
+                    <label for = "name">주소 :</label>
+                    <input type="text" name="address" id = "address" required>
+                    <!--  -->
+                    <label for = "name">전화번호 :</label>
+                    <input type="text" name="phoneNumber" id = "phoneNumber"
+                    placeholder="00*-000*-0000"
+                    pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"
+                    required>  
+                    <!--  -->
+                    <label for = "name">이메일 :</label>
+                    <input type="email" name="email" id = "email" 
+                    placeholder="***@***.***" required>
+
+                    <label for = "name">생년월일 :</label>
+                    <input type="date" name="dateOfBirth" id = "dateOfBirth">
+                    <!--  -->
+                    <button type="submit">학생 등록</button>
+                </form>
+        <!-- </fieldset> -->
+        </div>
+
+        <!--  -->
+        <div>
+            <h2>학생 리스트</h2>
+            <!--  -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>학번</th>
+                        <th>주소</th>
+                        <th>전화번호</th>
+                        <th>이메일</th>
+                        <th>생년월일</th>
+                        <th> 액션 </th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+        <!--  -->
+        <div>
+            <h2>학생 등록</h2>
+
+
+
+        </div>
+
+
     </body>
 </html>
