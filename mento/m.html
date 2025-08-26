@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 개념 이해 예제</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+      transition: background-color 0.5s ease;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript로 배경색 바꾸기</h1>
+  <p>아래 버튼을 클릭하면 배경색이 바뀝니다.</p>
+  <button onclick="changeBackground()">배경색 변경</button>
+
+  <script>
+    // 색상 배열 정의
+    const colors = ["#f0f0f0", "#ffcccb", "#d1e7dd", "#cfe2f3", "#fff3cd"];
+    let currentIndex = 0;
+
+    // 배경색을 변경하는 함수
+    function changeBackground() {
+      currentIndex = (currentIndex + 1) % colors.length;
+      document.body.style.backgroundColor = colors[currentIndex];
+    }
+  </script>
+</body>
+</html>

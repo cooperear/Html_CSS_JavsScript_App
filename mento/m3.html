@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>할 일 추가 예제</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 5px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>나의 할 일 목록</h2>
+  <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+  <button id="addBtn">추가</button>
+
+  <ul id="todoList"></ul>
+
+  <script>
+    const input = document.getElementById("todoInput");
+    const button = document.getElementById("addBtn");
+    const list = document.getElementById("todoList");
+
+    // 원하는 색상 배열
+    const colors = ["#e74c3c", "#27ae60", "#2980b9", "#f39c12", "#8e44ad"];
+    let colorIndex = 0;
+
+
+    button.addEventListener("click", () => {
+      const text = input.value.trim();
+      if (text !== "") {
+        const newItem = document.createElement("li");
+        newItem.textContent = text;
+
+                // 색상 적용
+        newItem.style.color = colors[colorIndex];
+        colorIndex = (colorIndex + 1) % colors.length;
+
+
+        list.appendChild(newItem);
+        input.value = ""; // 입력창 초기화
+      }
+    });
+  </script>
+</body>
+</html>

@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>도서관리시스템</title>
+         
+        <link rel="stylesheet" type="text/css" href="./css/form.css" />
+
     </head>
     <body>
         
@@ -16,7 +20,7 @@
             <label for="author">저자 :</label>
             <input type="text" name="author" id="author" required>
             <!--  -->
-            <label for="isbn">ISBN : </label>:</label>
+            <label for="isbn">ISBN :</label>
             <input type="text" name="isbn" id="isbn" required>
             <!--  -->
             <label for="price">가격 :</label>
@@ -42,7 +46,7 @@
                     <th>액션</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody  id="bookTableBody"></tbody>
         </table>
     </div>
         
