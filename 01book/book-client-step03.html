@@ -11,9 +11,9 @@
     </head>
     <body>
         
-        <div>
+        <div class="form-container">
         <h2>도서 등록</h2>
-        <form>
+        <form id="bookForm" class = "bookForm">
             <label for="title">제목 :</label>
             <input type="text" name="title" id="title" required>
             <!--  -->
@@ -29,13 +29,35 @@
             <label for="publishDate">출판일:</label>
             <input type="date" name="publishDate" id="publishDate">
             <!--  -->
+
+            <label for="description">description:</label>
+            <input type="text" name="description" id="description">
+            <!--  -->
+            <label for="language">language:</label>
+            <input type="text" name="language" id="language">
+            <!--  -->
+            <label for="pageCount">pageCount:</label>
+            <input type="number" name="pageCount" id="pageCount">
+            <!--  -->
+            <label for="publisher">publisher:</label>
+            <input type="text" name="publisher" id="publisher">
+            <!--  -->
+            <label for="coverImageUrl">coverImageUrl:</label>
+            <input type="text" name="coverImageUrl" id="coverImageUrl">
+            <!--  -->
+            <label for="edition">edition:</label>
+            <input type="text" name="edition" id="edition">
+            <!--  -->
+
+
             <button type="submit">도서 등록</button>
         </form>
     </div>
 
-    <div>
-        <h2>학생 리스트</h2>
-        <table>
+    <div class="table-container">
+
+        <h2>서적 리스트</h2>
+        <table >
             <thead>
                 <tr>
                     <th>제목</th>
@@ -43,12 +65,22 @@
                     <th>ISBN</th>
                     <th>가격</th>
                     <th>출판일</th>
+                    
+                    <th>description</th>
+                    <th>language</th>
+                    <th>pageCount</th>
+                    <th>publisher</th>
+                    <th>coverImageUrl</th>
+                    <th>edition</th>
+
                     <th>액션</th>
+
                 </tr>
             </thead>
             <tbody  id="bookTableBody"></tbody>
         </table>
     </div>
+
         
         
     </body>
