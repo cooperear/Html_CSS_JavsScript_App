@@ -13,6 +13,7 @@
         
         <div class="form-container">
         <h2>도서 등록</h2>
+        <span id="formError" class="error-message"></span>
         <form id="bookForm" class = "bookForm">
             <label for="title">제목 :</label>
             <input type="text" name="title" id="title" required>
@@ -24,7 +25,7 @@
             <input type="text" name="isbn" id="isbn" required>
             <!--  -->
             <label for="price">가격 :</label>
-            <input type="text" name="price" id="price" required>
+            <input type="number" name="price" id="price" required>
             <!--  -->
             <label for="publishDate">출판일:</label>
             <input type="date" name="publishDate" id="publishDate">
@@ -49,9 +50,11 @@
             <input type="text" name="edition" id="edition">
             <!--  -->
 
-
-            <button type="submit">도서 등록</button>
-        </form>
+            <div class="button-group"></div>
+                <button type="submit">도서 등록</button>
+                <button type="button" class="cancel-btn" onclick="resetForm()" style="display:none"> 취소 </button>
+            </form>
+        </div>
     </div>
 
     <div class="table-container">
